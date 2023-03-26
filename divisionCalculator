@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class divisionCalculator {
+    static void DisplaySum(int N1, int N2) {
+    }
+
+    public int solution(int N1, int N2) {
+        DisplaySum(N1, N2);
+        return N1 / N2;
+
+    }
+}

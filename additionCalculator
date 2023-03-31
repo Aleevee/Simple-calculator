@@ -1,10 +1,16 @@
 import java.util.*;
 
     public class additionCalculator {
-        static void DisplaySum(int N1, int N2) {
-        }
-           public int solution(int N1, int N2) {
-                DisplaySum(N1, N2);
-                return N1 + N2;
-           }
+        public static void main(String[] args) {
+       System.out.println("Enter your two numbers!");
+
+           Scanner scan = new Scanner(System.in);
+            int firstNumber = scan.nextInt();
+            int secondNumber = scan.nextInt();
+
+            int result = firstNumber + secondNumber;
+            System.out.println(result);
+
+        
     }
+}

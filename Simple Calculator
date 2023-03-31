@@ -1,32 +1,48 @@
 import java.util.*;
 
     public class Calculator {
+
         public static void main(String[] args) {
+            System.out.println("What calculation do you want to do?");
 
             Scanner scan = new Scanner(System.in);
-            System.out.println("What calculation do you want to do?");
-            String calcName = scan.nextLine();
-            int firstNumber = scan.nextInt();
-            int secondNumber = scan.nextInt();
+            String firstMessage = scan.nextLine();
 
-            switch (calcName) {
+            switch (firstMessage) {
+                case "Help", "help" -> System.out.println("Calculations include addition, subtraction, multiplication, and division");
                 case "addition", "Addition" -> {
-                    additionCalculator addition = new additionCalculator();
-                    System.out.print(addition.solution(firstNumber, secondNumber));
+                    System.out.println("Enter your two numbers!");
+                    int firstNumber = scan.nextInt();
+                    int secondNumber = scan.nextInt();
+                    int result = firstNumber + secondNumber;
+                    System.out.println(result);
                 }
-                case "subtraction", "Subtraction" -> {
-                    subtractionCalculator subtraction = new subtractionCalculator();
-                    System.out.print(subtraction.solution(firstNumber, secondNumber));
+                case "Subtraction", "subtraction" -> {
+                    System.out.println("Enter your two numbers!");
+                    int firstNumber = scan.nextInt();
+                    int secondNumber = scan.nextInt();
+                    int result = firstNumber - secondNumber;
+                    System.out.println(result);
                 }
                 case "multiplication", "Multiplication" -> {
-                    multiplicationCalculator multiplication = new multiplicationCalculator();
-                    System.out.print(multiplication.solution(firstNumber, secondNumber));
+                    System.out.println("Enter your two numbers!");
+                    int firstNumber = scan.nextInt();
+                    int secondNumber = scan.nextInt();
+                    int result = firstNumber * secondNumber;
+                    System.out.println(result);
                 }
                 case "division", "Division" -> {
-                    divisionCalculator division = new divisionCalculator();
-                    System.out.print(division.solution(firstNumber, secondNumber));
+                    System.out.println("Enter your two numbers!");
+                    int firstNumber = scan.nextInt();
+                    int secondNumber = scan.nextInt();
+                    int result = firstNumber / secondNumber;
+                    System.out.println(result);
                 }
                 default -> System.out.print("Calculation is not recognized, make sure you spelled it correctly!");
             }
+
+
+            System.out.println(" ");
+            System.out.println("Come again!");
+        }
     }
-}
